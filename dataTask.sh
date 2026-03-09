@@ -33,3 +33,18 @@ restaurer_base(){
 		echo "Aucun sauvegarde disposinible"
 	fi
 }
+
+supprimer_base(){
+	if [ -f "tasks.txt" ]; then
+		read -p "Etes-vous sure de vouloir supprimer la base? (y/n)" confirmation
+		if [ "$confiramtion" = "y" ]; then
+			rm tasks.txt 
+			echo "La base a ete supprimer avec succes"
+		else
+			echo "Suppresion annuler, rien a ete supprimer."
+		fi
+	else 
+		echo "La base n'existe pas, rien a ete supprimer"
+	fi
+}
+
