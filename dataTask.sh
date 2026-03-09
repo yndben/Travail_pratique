@@ -24,3 +24,12 @@ sauvegarder_base(){
 		echo "La base n'existe pas,rien a ete sauvegarder"
 	fi
 }
+
+restaurer_base(){
+	if [ -f "tasks.txt" ]; then 
+		cp tasks_backup tasks.txt 
+		echo "Base restaurer depuis la sauvegarde tasks_backup.txt"
+	else 
+		echo "Aucun sauvegarde disposinible"
+	fi
+}
