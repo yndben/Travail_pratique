@@ -7,3 +7,11 @@ initialiser_base(){
 		echo "La base a ete cree avec succes"
 	fi
 }
+
+afficher_toutes_taches(){
+	if [ -f "tasks.txt" ]; then
+		cat tasks.txt
+	else 
+		echo "Erreur: base non initialiser."
+	fi
+}
