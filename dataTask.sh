@@ -15,3 +15,12 @@ afficher_toutes_taches(){
 		echo "Erreur: base non initialiser."
 	fi
 }
+
+sauvegarder_base(){
+	if [ -f "tasks.txt" ]; then
+		cp tasks.txt tasks_backup.txt
+		echo "Sauvegarde creer: tasks_backup.txt"
+	else 
+		echo "La base n'existe pas,rien a ete sauvegarder"
+	fi
+}
